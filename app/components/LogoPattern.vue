@@ -1,40 +1,20 @@
 <template>
   <!-- Size & interactivity come from parent classes -->
-  <div class="scribble-badge relative isolate grid place-items-center" :style="cssVars">
+  <div class="scribble-badge relative isolate grid place-items-center">
     <!-- Put your number (or any content) here -->
     <slot>0</slot>
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  maskUrl: {
-    type: String,
-    default: 'pattern-square.svg'
-  }
-});
-
-const { app } = useRuntimeConfig();
-const baseURL = app.baseURL || '/';
-
-// Construct the full pattern URL
-const fullMaskPath = props.maskUrl.startsWith('http') || props.maskUrl.startsWith('/')
-  ? props.maskUrl
-  : `${baseURL}images/${props.maskUrl}`.replace(/\/+/g, '/');
-
-const patternUrl = `${baseURL}images/pattern-square.svg`.replace(/\/+/g, '/');
-
-const cssVars = {
-  '--pattern-url': `url("${patternUrl}")`,
-  '--mask-url': `url("${fullMaskPath}")`
-};
+// no props needed — style via classes on the component usage
 </script>
 
 <style scoped>
 /* Apply the mask to the host element so regular backgrounds get clipped too */
 .scribble-badge {
-  -webkit-mask-image: var(--mask-url, var(--pattern-url));
-  mask-image: var(--mask-url, var(--pattern-url));
+  -webkit-mask-image: var(--mask-url, url("/images/pattern-square.svg"));
+  mask-image: var(--mask-url, url("/images/pattern-square.svg"));
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: var(--mask-position, center);
@@ -52,8 +32,8 @@ const cssVars = {
   pointer-events: none;
 
   /* Mask shape (user can override URL via a CSS var) */
-  -webkit-mask-image: var(--mask-url, var(--pattern-url));
-  mask-image: var(--mask-url, var(--pattern-url));
+  -webkit-mask-image: var(--mask-url, url("/images/pattern-square.svg"));
+  mask-image: var(--mask-url, url("/images/pattern-square.svg"));
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: var(--mask-position, center);
