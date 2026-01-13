@@ -1,0 +1,157 @@
+/* Load DM Sans */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300..900&display=swap");
+
+@import "tailwindcss";
+
+/* ---------- Design tokens ---------- */
+:root {
+	scroll-padding-top: 6rem;
+	scroll-behavior: smooth;
+
+	--white: oklch(100% 0 none);
+
+	--primary-100: oklch(98.26% 0.061 104.85deg);
+	--primary-200: oklch(96.81% 0.1166 105.65deg);
+	--primary-300: oklch(95.66% 0.1613 106.12deg);
+	--primary-400: oklch(94.78% 0.1899 106.15deg);
+	--primary-500: oklch(94.12% 0.1999 105.66deg);
+	--primary-600: oklch(79.59% 0.1689 105.71deg);
+	--primary-700: oklch(64.35% 0.1364 105.8deg);
+	--primary-800: oklch(48.13% 0.1018 105.95deg);
+	--primary-900: oklch(30.38% 0.0639 106.33deg);
+
+	--secondary-100: oklch(89.41% 0.0641 342.16deg);
+	--secondary-200: oklch(79.57% 0.1314 344.08deg);
+	--secondary-300: oklch(71.11% 0.195 346.56deg);
+	--secondary-400: oklch(64.91% 0.2402 350.01deg);
+	--secondary-500: oklch(61.57% 0.2527 355.15deg);
+	--secondary-600: oklch(52.12% 0.2142 354.72deg);
+	--secondary-700: oklch(42.22% 0.1739 354.02deg);
+	--secondary-800: oklch(31.7% 0.131 352.74deg);
+	--secondary-900: oklch(20.19% 0.0844 349.53deg);
+
+	--surface-100: oklch(85.61% 0.0049 103.73deg);
+	--surface-200: oklch(70.59% 0.0103 104deg);
+	--surface-300: oklch(54.72% 0.0164 104.3deg);
+	--surface-400: oklch(37.61% 0.0236 104.82deg);
+	--surface-500: oklch(18.23% 0.0364 106.97deg);
+	--surface-600: oklch(16.52% 0.0329 107.19deg);
+	--surface-700: oklch(14.77% 0.0293 107.5deg);
+	--surface-800: oklch(12.88% 0.0256 107.67deg);
+	--surface-900: oklch(10.22% 0.0203 107.67deg);
+
+	--gray-100: oklch(89.95% 0.0005 288.57deg);
+	--gray-200: oklch(79.61% 0.0011 287.28deg);
+	--gray-300: oklch(68.92% 0.0017 286.85deg);
+	--gray-400: oklch(57.8% 0.0024 286.62deg);
+	--gray-500: oklch(46.11% 0.0032 286.45deg);
+	--gray-600: oklch(39.62% 0.0026 286.46deg);
+	--gray-700: oklch(32.86% 0.0021 286.48deg);
+	--gray-800: oklch(25.73% 0.0015 286.51deg);
+	--gray-900: oklch(18.06% 0.0008 286.6deg);
+}
+
+/* ---------- Tailwind v4 theme tokens ---------- */
+@theme {
+	/* colors */
+	--color-primary-100: var(--primary-100);
+	--color-primary-200: var(--primary-200);
+	--color-primary-300: var(--primary-300);
+	--color-primary-400: var(--primary-400);
+	--color-primary-500: var(--primary-500);
+	--color-primary-600: var(--primary-600);
+	--color-primary-700: var(--primary-700);
+	--color-primary-800: var(--primary-800);
+	--color-primary-900: var(--primary-900);
+	--color-primary: var(--primary-500);
+
+	--color-secondary-100: var(--secondary-100);
+	--color-secondary-200: var(--secondary-200);
+	--color-secondary-300: var(--secondary-300);
+	--color-secondary-400: var(--secondary-400);
+	--color-secondary-500: var(--secondary-500);
+	--color-secondary-600: var(--secondary-600);
+	--color-secondary-700: var(--secondary-700);
+	--color-secondary-800: var(--secondary-800);
+	--color-secondary-900: var(--secondary-900);
+	--color-secondary: var(--secondary-500);
+
+	--color-surface-100: var(--surface-100);
+	--color-surface-200: var(--surface-200);
+	--color-surface-300: var(--surface-300);
+	--color-surface-400: var(--surface-400);
+	--color-surface-500: var(--surface-500);
+	--color-surface-600: var(--surface-600);
+	--color-surface-700: var(--surface-700);
+	--color-surface-800: var(--surface-800);
+	--color-surface-900: var(--surface-900);
+
+	--color-gray-100: var(--gray-100);
+	--color-gray-200: var(--gray-200);
+	--color-gray-300: var(--gray-300);
+	--color-gray-400: var(--gray-400);
+	--color-gray-500: var(--gray-500);
+	--color-gray-600: var(--gray-600);
+	--color-gray-700: var(--gray-700);
+	--color-gray-800: var(--gray-800);
+	--color-gray-900: var(--gray-900);
+
+	--color-background: var(--surface-900);
+	--color-foreground: var(--white);
+	--color-muted-foreground: var(--gray-300);
+	--color-card: var(--surface-800);
+	--color-border: var(--surface-700);
+	--color-accent: var(--primary-500);
+	--color-accent-foreground: var(--surface-900);
+	--color-secondary: var(--secondary-500);
+	--color-secondary-foreground: var(--white);
+
+	--color-ring: var(--primary-500);
+
+	/* fonts (this gives you Tailwind utilities like `font-heading`) */
+	--font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+		Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-heading: "Typewriter Serial", var(--font-sans);
+}
+
+/* ---------- Global base ---------- */
+@layer base {
+	html,
+	body,
+	#__nuxt {
+		@apply min-h-full bg-surface-500;
+	}
+	body {
+		@apply text-neutral-100 antialiased;
+	}
+
+	/* Use the custom font for headings by default */
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: var(--font-heading);
+		font-weight: 900; /* uses Bold face below */
+		letter-spacing: -0.01em;
+	}
+}
+
+/* ---------- Local font faces ----------
+   Files live at: /public/fonts/Typewriter-Serial Bold.ttf and Regular.ttf
+   Served at:     /fonts/Typewriter-Serial%20Bold.ttf (no /public in URL)
+*/
+@font-face {
+	font-family: "Typewriter Serial";
+	src: url("/fonts/Typewriter-Serial-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Typewriter Serial";
+	src: url("/fonts/Typewriter-Serial-Bold.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
