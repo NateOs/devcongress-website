@@ -101,7 +101,11 @@ export default defineNuxtConfig({
 		},
 	},
 	nitro: {
-		preset: "github-pages", // Use the github_pages preset
+		preset: "github-pages",
+		prerender: {
+			crawlLinks: true,
+			failOnError: false,
+		},
 	},
 
 	vite: {
