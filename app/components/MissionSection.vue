@@ -1,7 +1,7 @@
 <template>
   <div id="mission" class="relative w-full h-full overflow-hidden py-12 lg:py-24 px-8">
     <div
-      class="relative w-full h-full mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-12 col-start-1 col-end-13 px-4 sm:px-0 gap-8 sm:gap-0"
+      class="relative w-full h-full mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-12 col-start-1 col-end-13 px-4 sm:px-0 gap-8"
     >
       <div
         class="col-start-auto sm:col-start-1 sm:col-end-7 flex flex-col space-y-4 items-center sm:items-start"
@@ -17,7 +17,7 @@
 
         <div class="space-y-6 mb-8">
           <div class="flex gap-4 group">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <LogoPattern
                 class="w-12 group aspect-square before:bg-surface-400 group-hover:before:bg-secondary-500 before:transition-colors before:duration-300"
               >
@@ -112,7 +112,7 @@
 
       <LogoPattern
         mask-url="pattern-rectangle.svg"
-        class="w-full h-full scale-120 aspect-video sm:absolute left-0 sm:left-2/3 object-cover drop-shadow-xl group before:bg-[url('https://pbs.twimg.com/media/GnM9JWzWUAAJg7I?format=jpg&name=large')] before:bg-cover"
+        class="w-full h-auto min-h-75 sm:min-h-100 aspect-video object-cover drop-shadow-xl group before:bg-[url('https://pbs.twimg.com/media/GnM9JWzWUAAJg7I?format=jpg&name=large')] before:bg-cover md:absolute md:h-full md:left-[50%] md:right-0 lg:left-[48%] lg:scale-120 xl:left-[50%]"
       >
       </LogoPattern>
     </div>
