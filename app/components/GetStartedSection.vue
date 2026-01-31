@@ -102,7 +102,8 @@
 
       <div class="text-center mt-12">
         <a
-          href="#join"
+          href="https://devcongress-community.slack.com/join/shared_invite/zt-3elxv0f0y-U6JoK8Al4ExQp8ERaS8uwg#/shared-invite/email"
+          target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-primary-500 text-accent-foreground font-semibold hover:bg-primary-600 transition duration-150 ease-out delay-75"
         >
           Join Community

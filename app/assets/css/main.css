@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300..900&display=swap");
 
 @import "tailwindcss";
+@import "./animations.css";
 
 /* ---------- Design tokens ---------- */
 :root {

@@ -8,7 +8,8 @@
           <ul class="space-y-6">
             <li>
               <a
-                href="#"
+                href="https://devcongress-community.slack.com/join/shared_invite/zt-3elxv0f0y-U6JoK8Al4ExQp8ERaS8uwg#/shared-invite/email"
+                target="_blank" rel="noopener noreferrer"
                 class="text-gray-100 hover:text-primary-500 hover:underline text-lg transition-colors"
                 >Join Community</a
               >
@@ -83,14 +84,16 @@
           <ul class="space-y-6">
             <li>
               <a
-                href="#"
+                href="https://x.com/DevCongress"
+                target="_blank" rel="noopener noreferrer"
                 class="text-gray-100 hover:text-primary-500 hover:underline text-lg transition-colors"
-                >Twitter</a
+                >X (Twitter)</a
               >
             </li>
             <li>
               <a
                 href="#"
+                
                 class="text-gray-100 hover:text-primary-500 hover:underline text-lg transition-colors"
                 >LinkedIn</a
               >
@@ -109,7 +112,7 @@
 
       <div class="pt-8 text-center">
         <p class="text-gray-100">
-        Designed & developed with love from Ghana 🇬🇭 by <a href="" target="_blank" rel="noopener noreferrer" class="underline text-primary-500">Name</a>
+        Designed & developed with love from Ghana 🇬🇭 by <a href="https://www.linkedin.com/in/yoofi-graham/" target="_blank" rel="noopener noreferrer" class="underline text-primary-500">Yoofi Graham</a>
         </p>
       </div>
     </div>

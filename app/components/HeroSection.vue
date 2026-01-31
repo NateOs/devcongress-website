@@ -22,7 +22,8 @@
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#join"
+            href="https://devcongress-community.slack.com/join/shared_invite/zt-3elxv0f0y-U6JoK8Al4ExQp8ERaS8uwg#/shared-invite/email"
+            target="_blank" rel="noopener noreferrer"
             class="inline-flex text-center items-center justify-center rounded-2xl px-6 py-4 bg-primary-500 text-accent-foreground font-semibold hover:bg-primary-600 transition duration-150 ease-out delay-75"
           >
             Join Community

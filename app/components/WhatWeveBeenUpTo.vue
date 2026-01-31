@@ -10,19 +10,19 @@
 
       <!-- Bento Grid -->
       <div
-        class="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6 auto-rows-[minmax(8rem,auto)] md:[grid-auto-flow:dense]"
+        class="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6 auto-rows-[minmax(8rem,auto)] md:grid-flow-dense"
       >
         <div v-for="(card, i) in cards" :key="i" :class="card.size">
           <a
             :href="card.link"
-            class="group block h-full rounded-3xl transition duration-300 bg-[color:var(--card-color)]/20"
+            class="group block h-full rounded-3xl transition duration-300 bg-(--card-color)/5 hover:bg-(--card-color)/20"
             :style="{ '--card-color': card.color }"
           >
             <div class="flex h-full gap-4 items-start justify-between p-5 md:p-7">
               <!-- Copy -->
               <div class="w-full">
                 <h3
-                  class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-100 transition-colors duration-300 group-hover:text-[color:var(--card-color)]"
+                  class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-100 transition-colors duration-300 group-hover:text-(--card-color)"
                 >
                   {{ card.title }}
                 </h3>
