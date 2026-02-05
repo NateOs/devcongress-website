@@ -37,7 +37,7 @@
           <div
             v-for="(t, i) in testimonials"
             :key="i"
-            class="snap-start min-w-[16rem] w-[20rem] sm:w-[24rem] shrink-0 group"
+            class="snap-start min-w-[14.4rem] w-[18rem] sm:w-[21.6rem] shrink-0 group"
           >
             <div
               class="relative w-full rounded-3xl overflow-hidden shadow-lg group-hover:scale-[1.02] transition-transform duration-300"
@@ -66,9 +66,19 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
-import { testimonials } from '../data/testimonials';
+import { testimonials as rawTestimonials } from '../data/testimonials';
 
 const scroller = ref(null);
+const testimonials = ref([]);
+
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 function scrollBy(direction = 1) {
   const el = scroller.value;
@@ -120,6 +130,7 @@ function onKeyDown(e) {
 }
 
 onMounted(() => {
+  testimonials.value = shuffleArray(rawTestimonials);
   const el = scroller.value;
   if (!el) return;
   el.addEventListener('pointerdown', onPointerDown);
