@@ -13,14 +13,14 @@
       <button
         @click="scrollBy(-1)"
         aria-label="Previous testimonials"
-        class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/50 backdrop-blur-md text-white rounded-full p-2 hover:bg-black/60 focus:outline-none"
+        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 backdrop-blur-md text-white rounded-full p-4 text-2xl transition-colors duration-150 testimonial-scroll-button focus:outline-none"
       >
         ‹
       </button>
       <button
         @click="scrollBy(1)"
         aria-label="Next testimonials"
-        class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/50 backdrop-blur-md text-white rounded-full p-2 hover:bg-black/60 focus:outline-none"
+        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 backdrop-blur-md text-white rounded-full p-4 text-2xl transition-colors duration-150 testimonial-scroll-button focus:outline-none"
       >
         ›
       </button>
@@ -147,5 +147,10 @@ onBeforeUnmount(() => {
 .scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.testimonial-scroll-button:hover {
+  background: oklch(0.9412 0.1999 105.66) !important;
+  color: black !important;
 }
 </style>
