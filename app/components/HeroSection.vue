@@ -1,3 +1,43 @@
+<script setup>
+import { onBeforeUnmount, onMounted, ref } from "vue";
+
+const videoFrame = ref(null);
+let observer;
+
+const postToPlayer = (func) => {
+  const frame = videoFrame.value;
+  if (!frame || !frame.contentWindow) return;
+  frame.contentWindow.postMessage(
+    JSON.stringify({ event: "command", func, args: [] }),
+    "*"
+  );
+};
+
+onMounted(() => {
+  const frame = videoFrame.value;
+  if (!frame) return;
+
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        postToPlayer("mute");
+        postToPlayer("playVideo");
+      } else {
+        postToPlayer("pauseVideo");
+      }
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(frame);
+});
+
+onBeforeUnmount(() => {
+  if (observer && videoFrame.value) observer.unobserve(videoFrame.value);
+  observer = null;
+});
+</script>
+
 <template>
   <!-- Hero Section -->
   <section class="py-32 px-6 ">
@@ -119,8 +159,9 @@
       <div class="rounded-2xl overflow-hidden shadow-2xl">
         <div class="w-full aspect-video">
           <iframe
+            ref="videoFrame"
             class="w-full h-full"
-            src="https://www.youtube-nocookie.com/embed/vNWWGWXjybg?rel=0&modestbranding=1&playsinline=1"
+            src="https://www.youtube-nocookie.com/embed/vNWWGWXjybg?rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
             title="DevCongress – Community Highlight"
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
