@@ -3,7 +3,7 @@
     <div class="max-w-8xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <a href="/" class="flex items-center gap-2">
+        <a href="/website" class="flex items-center gap-2">
           <img src="/images/logo.svg" alt="Devcongress Logo" class="h-8 w-auto" />
         </a>
 
