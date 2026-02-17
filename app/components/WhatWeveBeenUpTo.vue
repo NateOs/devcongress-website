@@ -13,7 +13,38 @@
         class="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6 auto-rows-[minmax(8rem,auto)] md:grid-flow-dense"
       >
         <div v-for="(card, i) in cards" :key="i" :class="card.size">
+          <div
+            v-if="card.title === 'Echo Podcast'"
+            class="group block h-full rounded-3xl transition duration-300 bg-(--card-color)/5 hover:bg-(--card-color)/20"
+            :style="{ '--card-color': card.color }"
+          >
+            <div class="flex h-full flex-col gap-4 p-5 md:p-7">
+              <!-- Copy -->
+              <div class="w-full">
+                <h3
+                  class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-100 transition-colors duration-300 group-hover:text-(--card-color)"
+                >
+                  {{ card.title }}
+                </h3>
+                <p
+                  class="text-base md:text-lg text-white/60 leading-snug mt-2 transition-colors duration-300 group-hover:text-white"
+                >
+                  {{ card.description }}
+                </p>
+              </div>
+
+              <iframe
+                src="https://embed.acast.com/653bf1eb18e0ae00111ac1a1?episode-order=desc&accentColor=161616&bgColor=fcf404&secondaryColor=161616&feed=true"
+                frameborder="0"
+                width="100%"
+                height="280px"
+                title="Echo Podcast"
+              ></iframe>
+            </div>
+          </div>
+
           <a
+            v-else
             :href="card.link"
             class="group block h-full rounded-3xl transition duration-300 bg-(--card-color)/5 hover:bg-(--card-color)/20"
             :style="{ '--card-color': card.color }"
