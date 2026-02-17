@@ -92,7 +92,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/devcongress"
                 
                 class="text-gray-100 hover:text-primary-500 hover:underline text-lg transition-colors"
                 >LinkedIn</a
